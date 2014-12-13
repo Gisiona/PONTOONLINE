@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PontoOnline.Negocio", "Pont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PontoOnline.Interface", "PontoOnline.Interface\PontoOnline.Interface.csproj", "{393327E1-0C56-4B65-9860-E38F7C5A16C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PontoOnline.UTeste", "PontoOnline.UTeste\PontoOnline.UTeste.csproj", "{4FB1863F-5231-4C44-BFCC-3D37A28FB23E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{393327E1-0C56-4B65-9860-E38F7C5A16C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{393327E1-0C56-4B65-9860-E38F7C5A16C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{393327E1-0C56-4B65-9860-E38F7C5A16C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FB1863F-5231-4C44-BFCC-3D37A28FB23E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB1863F-5231-4C44-BFCC-3D37A28FB23E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB1863F-5231-4C44-BFCC-3D37A28FB23E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB1863F-5231-4C44-BFCC-3D37A28FB23E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

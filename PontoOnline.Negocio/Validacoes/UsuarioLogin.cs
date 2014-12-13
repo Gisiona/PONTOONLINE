@@ -9,13 +9,13 @@ namespace PontoOnline.Negocio
 {
     public class UsuarioLogin
     {
-        public void Login(Usuario user)
+        public bool Login(Usuario user)
         {
             try
             {
                 if (string.IsNullOrEmpty(user.Nome.Trim().ToString()))
                 {
-                    throw new Exception("Erro: O campo usuário não pode ser vazio. Digite o usuário.");
+                    throw new Exception("Erro: O campo usuário não pode ser vazio. Digite o usuário.");                    
                 }
                 else if(string.IsNullOrEmpty(user.Senha.Trim().ToString()))
                 {
@@ -26,6 +26,7 @@ namespace PontoOnline.Negocio
             {
                 throw new Exception("Ocorreu erro na validação do login \n" + ex.Message);
             }
+            return true;
         }
     }
 }
