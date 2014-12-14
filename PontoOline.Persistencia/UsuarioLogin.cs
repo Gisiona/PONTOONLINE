@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PontoOnline.Dominio;
 using System.Data.SqlClient;
-
+using System.Configuration;
 
 namespace PontoOline.Persistencia
 {
@@ -13,7 +13,10 @@ namespace PontoOline.Persistencia
     {
         public void Login(Usuario user)
         {
-            
+            //using(var con = ConfigurationManager.ConnectionStrings["ConnectionPontoOnline"].ConnectionString)
+            //{
+
+            //}
         }
     }
 }
