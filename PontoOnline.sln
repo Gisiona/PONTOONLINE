@@ -5,13 +5,13 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PontoOnline.Dominio", "PontoOnline.Dominio\PontoOnline.Dominio.csproj", "{68DABCE7-1320-47D9-AFAD-424C4090D143}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PontoOline.Persistencia", "PontoOline.Persistencia\PontoOline.Persistencia.csproj", "{DC9189CC-1CCC-4B0C-861D-5FC38AD9F1DD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PontoOnline.Negocio", "PontoOnline.Negocio\PontoOnline.Negocio.csproj", "{953A382A-ECA6-4598-ADDB-3AB90F3E9756}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PontoOnline.Interface", "PontoOnline.Interface\PontoOnline.Interface.csproj", "{393327E1-0C56-4B65-9860-E38F7C5A16C7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PontoOnline.UTeste", "PontoOnline.UTeste\PontoOnline.UTeste.csproj", "{4FB1863F-5231-4C44-BFCC-3D37A28FB23E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PontoOnline.Repositorio", "PontoOnline.Repositorio\PontoOnline.Repositorio.csproj", "{305F5E2F-AD4C-436E-94B6-12C07608C996}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		{68DABCE7-1320-47D9-AFAD-424C4090D143}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68DABCE7-1320-47D9-AFAD-424C4090D143}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68DABCE7-1320-47D9-AFAD-424C4090D143}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DC9189CC-1CCC-4B0C-861D-5FC38AD9F1DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC9189CC-1CCC-4B0C-861D-5FC38AD9F1DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC9189CC-1CCC-4B0C-861D-5FC38AD9F1DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC9189CC-1CCC-4B0C-861D-5FC38AD9F1DD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{953A382A-ECA6-4598-ADDB-3AB90F3E9756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{953A382A-ECA6-4598-ADDB-3AB90F3E9756}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{953A382A-ECA6-4598-ADDB-3AB90F3E9756}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{4FB1863F-5231-4C44-BFCC-3D37A28FB23E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FB1863F-5231-4C44-BFCC-3D37A28FB23E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FB1863F-5231-4C44-BFCC-3D37A28FB23E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{305F5E2F-AD4C-436E-94B6-12C07608C996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{305F5E2F-AD4C-436E-94B6-12C07608C996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{305F5E2F-AD4C-436E-94B6-12C07608C996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{305F5E2F-AD4C-436E-94B6-12C07608C996}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

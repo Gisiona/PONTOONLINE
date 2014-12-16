@@ -74,7 +74,7 @@
     </div>
 </nav>
 
-@using (Html.BeginForm("Ponto", "PontoOnline", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@*@using (Html.BeginForm("Ponto", "PontoOnline", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
@@ -100,7 +100,7 @@
                 <div class="form-group">
                     <label for="CNPJ" class="col-sm-3 control-label">Volta Almoço:</label>
                     <div class="col-sm-8"   >
-                        @Html.TextBoxFor(model => model.SaidaEmbora, new { @class = "form-control" })
+                        @Html.TextBoxFor(model => model.EntradaAlmoco, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
@@ -120,7 +120,7 @@
             </div>
         </div>
     </fieldset>
-}
+}*@
 <hr />
 
 

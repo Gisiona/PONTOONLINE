@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PontoOline.Persistencia")]
+[assembly: AssemblyTitle("PontoOnline.Repositorio")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PontoOline.Persistencia")]
+[assembly: AssemblyProduct("PontoOnline.Repositorio")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8960574d-eeca-4b02-8b05-6aa65b2816c6")]
+[assembly: Guid("ed1d4f4e-18a9-453b-990a-347bafcd4aba")]
 
 // Version information for an assembly consists of the following four values:
 //

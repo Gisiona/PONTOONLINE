@@ -11,15 +11,34 @@ namespace PontoOnline.Interface.Controllers
     {
         //
         // GET: /PontoOnline/
+        
         public ActionResult Ponto()
         {
-            return View();
+            Ponto p = new Ponto
+            {
+                IdPonto = 1,
+                Data = DateTime.Now,
+                Entrada = "09:00:00",
+                SaidaAlmoco = "12:30:00",
+                EntradaAlmoco = "13:30:10",
+                SaidaEmbora = "18:23:30"
+            };
+            return View(p.ToString());
         }
 
         [HttpPost]
         public ActionResult Ponto(Ponto ponto)
         {
-            return View();
+            Ponto p = new Ponto
+            {
+                IdPonto = 1,
+                Data = DateTime.Now,
+                Entrada = "09:00:00",
+                SaidaAlmoco = "12:30:00",
+                EntradaAlmoco = "13:30:10",
+                SaidaEmbora = "18:23:30"
+            };
+            return View(p);
         }
 
     }

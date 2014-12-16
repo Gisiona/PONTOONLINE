@@ -43,10 +43,6 @@
     <Compile Include="Validacoes\UsuarioLogin.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PontoOline.Persistencia\PontoOline.Persistencia.csproj">
-      <Project>{dc9189cc-1ccc-4b0c-861d-5fc38ad9f1dd}</Project>
-      <Name>PontoOline.Persistencia</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PontoOnline.Dominio\PontoOnline.Dominio.csproj">
       <Project>{68dabce7-1320-47d9-afad-424c4090d143}</Project>
       <Name>PontoOnline.Dominio</Name>
