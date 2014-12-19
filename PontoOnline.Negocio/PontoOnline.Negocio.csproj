@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PontoNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validacoes\UsuarioLogin.cs" />
   </ItemGroup>

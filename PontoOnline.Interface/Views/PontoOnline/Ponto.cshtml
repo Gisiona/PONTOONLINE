@@ -1,6 +1,4 @@
-﻿@model IEnumerable<PontoOnline.Dominio.Entidades.Ponto>
-
-@{
+﻿@{
     ViewBag.Title = "Gestão de Treino";
 }
 
@@ -68,126 +66,74 @@
             <ul class="nav navbar-nav">
                 <li class="active"> <a href="#">: </a> </li>
                 <li class=""> <a href="#"> Ponto Dia </a> </li>
-                <li class=""> <a href="#"> Ponto Mês </a> </li>
+                <li class=""> <a href="~/PontoOnline/PontoMarcacao/"> Ponto Mês </a> </li>
             </ul>
+
+            <!-- Usuário Logado -->
+            <ul class="nav navbar-nav navbar-right user-nav">
+                <li class="dropdown profile_menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="alert-link"><a class="list-group">Editar Perfil</a></li>
+                        <li><a class="list-group" href="~/PontoOnline/PontoOnline/">Trocar Senha</a></li>
+                        <li><a class="glyphicon-list-alt" href="~/PontoOnline/PontoOnline/">Sair</a></li>
+                    </ul>
+                </li>
+            </ul>
+
         </div>
     </div>
 </nav>
 
-@*@using (Html.BeginForm("Ponto", "PontoOnline", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
-    <fieldset>
-        <legend></legend>
-        <div class="row">
-            <div class="form-horizontal col-sm-6">
-                <div class="form-group">
-                    <label for="Nome" class="col-sm-3 control-label">Entrada:</label>
-                    <div class="col-sm-9">
-                        @Html.TextBoxFor(model => model.Entrada, new { @class = "form-control" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="CNPJ" class="col-sm-3 control-label">Saída Almoço:</label>
-                    <div class="col-sm-9">
-                        @Html.TextBoxFor(model => model.SaidaAlmoco, new { @class = "form-control" })
-                    </div>
+
+<h2 class="te"> Digite todas as horas diariamente.</h2>
+<fieldset>
+    <legend></legend>
+    <div class="row">
+        <div class="form-horizontal col-sm-6">
+            <div class="form-group">
+                <label for="Nome" class="col-sm-3 control-label">Entrada Manhã:</label>
+                <div class="col-sm-2">
+                    <input type="time" class="form-control">
                 </div>
             </div>
 
-            <div class="form-horizontal col-sm-6">
-                <div class="form-group">
-                    <label for="CNPJ" class="col-sm-3 control-label">Volta Almoço:</label>
-                    <div class="col-sm-8"   >
-                        @Html.TextBoxFor(model => model.EntradaAlmoco, new { @class = "form-control" })
-                    </div>
+            <div class="form-group">
+                <label for="Nome" class="col-sm-3 control-label">Saída Almoço:</label>
+                <div class="col-sm-2">
+                    <input type="time" class="form-control">
                 </div>
-                <div class="form-group">
-                    <label for="CNPJ" class="col-sm-3 control-label">Saída Embora:</label>
-                    <div class="col-sm-8">
-                        @Html.TextBoxFor(model => model.EntradaAlmoco, new { @class = "form-control" })
-                    </div>
+            </div>
+
+            <div class="form-group">
+                <label for="Nome" class="col-sm-3 control-label">Volta Almoço:</label>
+                <div class="col-sm-2">
+                    <input type="time" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="Nome" class="col-sm-3 control-label">Saída Embora:</label>
+                <div class="col-sm-2">
+                    <input type="time" class="form-control">
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="Nome" class="col-sm-3 control-label"></label>
-                <div class="col-sm-9">
-                    <input type="submit" class="btn btn-primary" value="Salvar Dados" />
-                    <input type="reset" class="btn btn-danger" value="Limpar Dados" />
+                <div class="col-sm-3">
+                    <input type="submit" class="btn btn-primary" value="Enviar Dados" />
                 </div>
             </div>
         </div>
-    </fieldset>
-}*@
+
+        <div class="form-horizontal col-sm-4">
+            
+        </div>
+
+
+    </div>
+</fieldset>
+
 <hr />
 
-
-
-
-<table class="table table-hover">
-    <tr class="success">
-        <th>
-            @Html.DisplayName("Código")
-        </th>
-        <th>
-            @Html.DisplayName("Data")
-        </th>
-        <th>
-            @Html.DisplayName("Hora Entrada")
-        </th>
-        <th>
-            @Html.DisplayName("Saída Almoço")
-        </th>
-        <th>
-            @Html.DisplayName("Retorno Almoço")
-        </th>
-        <th>
-            @Html.DisplayName("Saída Embora)")
-        </th>
-        <th>
-            @*<a href="javascript:window.print()" target="_blank" class="btn btn-default">
-                    <img src="~/Images/Icones/1415818942_print.png" /> Imprimir
-                </a>*@
-            @*<button class="btn  btn-danger">
-                    <img src="~/Images/Icones/imprimir.png" alt="Imprimir Treino" />    Imprimir
-                </button>*@
-        </th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdPonto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Data)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Entrada)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SaidaAlmoco)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EntradaAlmoco)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SaidaEmbora)
-            </td>
-
-            <td>
-                <a href="javascript:window.print()" target="_blank">
-                    <img src="~/Images/Icones/imprimir.png" alt="Imprimir" />
-                </a>
-            </td>
-        </tr>
-    }
-    <tfoot>
-        <tr class="success">
-            <td colspan="11"> <b> Quantidade de Registros: @Model.Count() </b></td>
-        </tr>
-    </tfoot>
-</table>

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.Design;
 
-namespace PontoOnline.Dominio
+namespace PontoOnline.Dominio.Entidades
 {
     public class Usuario
     {
@@ -14,5 +14,6 @@ namespace PontoOnline.Dominio
         public string Senha { get; set; }
         public DateTime DataCadastro { get; set; }
         public bool Status { get; set; }
+        public bool LembrarSenha { get; set; }
     }
 }

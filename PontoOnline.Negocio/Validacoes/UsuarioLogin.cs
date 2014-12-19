@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PontoOnline.Dominio;
+using PontoOnline.Dominio.Entidades;
 
 namespace PontoOnline.Negocio
 {
-    public class UsuarioLogin
+    public class UsuarioLoginNegocio
     {
         /// <summary>
         /// Metodo para validar os dados do login

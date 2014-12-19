@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using PontoOnline.Dominio;
+using PontoOnline.Dominio.Entidades;
 
 
 namespace PontoOnline.Interface.Controllers

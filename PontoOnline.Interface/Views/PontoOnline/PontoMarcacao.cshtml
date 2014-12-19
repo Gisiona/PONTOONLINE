@@ -1,0 +1,75 @@
+﻿@model IEnumerable<PontoOnline.Dominio.Entidades.Ponto>
+
+@{
+    ViewBag.Title = "PontoMarcacao";
+}
+
+<h2>PontoMarcacao</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdPonto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Entrada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaidaAlmoco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EntradaAlmoco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaidaEmbora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QtdeHoraExtra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalHoraTrabalhada)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdPonto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Entrada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaidaAlmoco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntradaAlmoco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaidaEmbora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QtdeHoraExtra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalHoraTrabalhada)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

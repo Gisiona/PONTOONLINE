@@ -256,6 +256,9 @@
     <Content Include="Views\Web.config" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
     <Content Include="Views\PontoOnline\Ponto.cshtml" />
+    <Content Include="Views\PontoOnline\PontoOnline.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml.cshtml" />
+    <Content Include="Views\PontoOnline\PontoMarcacao.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
