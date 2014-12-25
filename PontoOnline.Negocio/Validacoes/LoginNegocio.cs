@@ -4,34 +4,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PontoOnline.Dominio.Entidades;
+using PontoOnline.Dominio.Repositorio;
 
 namespace PontoOnline.Negocio
 {
-    public class UsuarioLoginNegocio
+    public class LoginNegocio
     {
         /// <summary>
         /// Metodo para validar os dados do login
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public bool Login(Usuario user)
+        public static bool Login(string user, string senha)
         {
-            try
-            {
-                if (string.IsNullOrEmpty(user.Nome.Trim().ToString()))
+            try            {
+                if (string.IsNullOrEmpty(user.Trim().ToString()))
                 {
                     throw new Exception("Erro: O campo usuário não pode ser vazio. Digite o usuário.");
                 }
-                else if (string.IsNullOrEmpty(user.Senha.Trim().ToString()))
+                else if (string.IsNullOrEmpty(senha.Trim().ToString()))
                 {
                     throw new Exception("Erro: O campo senha não pode ser vazio. Digite a senha.");
+                }
+                else
+                {
+                   var repositorioLogin =  PontoOnline.Dominio.Repositorio.LoginRepositorio.Login(user, senha);
+                   return repositorioLogin;
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro na validação do login \n" + ex.Message);
+                throw new Exception("Ocorreu erro na validação do login \n" + ex.Message, ex.InnerException);
             }
-            return true;
         }
 
 

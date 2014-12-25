@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PontoOnline.Dominio.Entidades;
+using PontoOnline.Negocio;
 
 
 namespace PontoOnline.Interface.Controllers
@@ -25,10 +26,23 @@ namespace PontoOnline.Interface.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult Login(Usuario user)
+        public ActionResult Login(string user, string senha, string Url)
         {
-            return View();
-        }
-
+            try
+            {
+                if(PontoOnline.Negocio.LoginNegocio.Login(user, senha))
+                {
+                    return Redirect(Url);
+                }
+                else
+                {
+                    return View();
+                }
+            }
+            catch (Exception)
+            {                
+                throw;
+            }
+        }        
     }
 }

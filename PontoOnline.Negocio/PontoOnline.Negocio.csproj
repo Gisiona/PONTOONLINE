@@ -41,7 +41,8 @@
   <ItemGroup>
     <Compile Include="PontoNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Validacoes\UsuarioLogin.cs" />
+    <Compile Include="Validacoes\PontoNegocio.cs" />
+    <Compile Include="Validacoes\LoginNegocio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PontoOnline.Dominio\PontoOnline.Dominio.csproj">
