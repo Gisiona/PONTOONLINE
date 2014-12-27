@@ -50,8 +50,12 @@ namespace PontoOnline.Dominio.Repositorio
         /// <summary>
         /// Metodo responsavel por consultar dados da marcaçao do ponto
         /// </summary>
-        public void ConsultarPonto()
+        public static List<Ponto> ListarPonto(int id)
         {
+            ContextPonto ctx = new ContextPonto();
+            
+            var ponto = ctx.Ponto.Where(m => m.IdPonto == id).ToList();
+            return ponto;
 
         }
 

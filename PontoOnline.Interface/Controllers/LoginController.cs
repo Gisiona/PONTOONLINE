@@ -26,23 +26,23 @@ namespace PontoOnline.Interface.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult Login(string user, string senha, string Url)
+        public RedirectToRouteResult Login(string user, string senha, string returnUrl)
         {
             try
             {
-                if(PontoOnline.Negocio.LoginNegocio.Login(user, senha))
+                if (PontoOnline.Negocio.LoginNegocio.Login(user, senha))
                 {
-                    return Redirect(Url);
+                    return RedirectToAction("Ponto", "PontoOnline");
                 }
                 else
                 {
-                    return View();
-                }
+                    return RedirectToAction("Login", new { returnUrl });
+                }                
             }
-            catch (Exception)
-            {                
-                throw;
+            catch (Exception ex)
+            {
+                throw new Exception("Erro: " + ex.Message, ex.InnerException);
             }
-        }        
+        }
     }
 }

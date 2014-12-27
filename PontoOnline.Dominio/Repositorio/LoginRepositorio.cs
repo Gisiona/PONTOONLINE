@@ -4,26 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PontoOnline.Dominio.Entidades;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace PontoOnline.Dominio.Repositorio
 {
     public static class LoginRepositorio
     {
+
         public static bool Login(string user, string senha)
         {
+            ContextPonto ctx = new ContextPonto();
             try
             {
-                using (var ctx = new ContextPonto())
+                var usuario = ctx.Usuario.Where(m => m.Nome == user && m.Senha == senha);
+                var use = usuario.ToString();
+                if (usuario.Count() > 1)
                 {
-                    var usuario = ctx.Usuario.Where(m => m.Nome == user && m.Senha == senha);
-                    if (usuario.Count() > 1)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return true;
+                }
+                else
+                {
+                    return true;
                 }
             }
             catch (Exception ex)

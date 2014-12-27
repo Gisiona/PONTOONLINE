@@ -35,5 +35,28 @@ namespace PontoOnline.Negocio.Validacoes
                 throw new Exception("Não é permitido fazer lancamento de dias retroativo com seu usuário. " + ex.Message + " - " + ex.InnerException);
             }
         }
+
+
+        public static List<Ponto> ListarPonto(int id)
+        {
+            try
+            {
+                if (id != null)
+                {
+                    var ponto = PontoRepositorio.ListarPonto(id);
+                    return ponto.ToList();
+                }
+                else
+                {
+                    throw new Exception("Selecione o mês que deseja listar as marcações. ");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Não é permitido fazer lancamento de dias retroativo com seu usuário. " + ex.Message + " - " + ex.InnerException);
+            }
+        }
+
+        
     }
 }

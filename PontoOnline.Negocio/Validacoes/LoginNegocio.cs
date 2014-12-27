@@ -17,7 +17,8 @@ namespace PontoOnline.Negocio
         /// <returns></returns>
         public static bool Login(string user, string senha)
         {
-            try            {
+            try
+            {
                 if (string.IsNullOrEmpty(user.Trim().ToString()))
                 {
                     throw new Exception("Erro: O campo usuário não pode ser vazio. Digite o usuário.");
@@ -28,8 +29,8 @@ namespace PontoOnline.Negocio
                 }
                 else
                 {
-                   var repositorioLogin =  PontoOnline.Dominio.Repositorio.LoginRepositorio.Login(user, senha);
-                   return repositorioLogin;
+                    var repositorioLogin = PontoOnline.Dominio.Repositorio.LoginRepositorio.Login(user, senha);
+                    return repositorioLogin;
                 }
             }
             catch (Exception ex)

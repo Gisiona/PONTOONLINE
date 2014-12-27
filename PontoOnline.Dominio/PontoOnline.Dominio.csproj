@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,6 +50,23 @@
     <Compile Include="Entidades\ContextPonto.cs" />
     <Compile Include="Entidades\Ponto.cs" />
     <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Migrations\201412270130046_novo.cs" />
+    <Compile Include="Migrations\201412270130046_novo.Designer.cs">
+      <DependentUpon>201412270130046_novo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412270141477_AtualizadoTabelaPonto.cs" />
+    <Compile Include="Migrations\201412270141477_AtualizadoTabelaPonto.Designer.cs">
+      <DependentUpon>201412270141477_AtualizadoTabelaPonto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412270143358_AtualizaPonto.cs" />
+    <Compile Include="Migrations\201412270143358_AtualizaPonto.Designer.cs">
+      <DependentUpon>201412270143358_AtualizaPonto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412270146220_AddEmailUser.cs" />
+    <Compile Include="Migrations\201412270146220_AddEmailUser.Designer.cs">
+      <DependentUpon>201412270146220_AddEmailUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\LoginRepositorio.cs" />
     <Compile Include="Repositorio\PontoRepositorio.cs" />
@@ -56,6 +74,20 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201412270130046_novo.resx">
+      <DependentUpon>201412270130046_novo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412270141477_AtualizadoTabelaPonto.resx">
+      <DependentUpon>201412270141477_AtualizadoTabelaPonto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412270143358_AtualizaPonto.resx">
+      <DependentUpon>201412270143358_AtualizaPonto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412270146220_AddEmailUser.resx">
+      <DependentUpon>201412270146220_AddEmailUser.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

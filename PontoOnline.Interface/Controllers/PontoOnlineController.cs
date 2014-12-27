@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PontoOnline.Dominio.Entidades;
+using PontoOnline.Negocio.Validacoes;
 
 namespace PontoOnline.Interface.Controllers
 {
@@ -16,7 +17,7 @@ namespace PontoOnline.Interface.Controllers
         {
             return View();
         }
-        
+
         public ActionResult Ponto()
         {
             return View();
@@ -25,27 +26,36 @@ namespace PontoOnline.Interface.Controllers
         [HttpPost]
         public ActionResult Ponto(Ponto ponto)
         {
-            Ponto p = new Ponto
-            {
-                IdPonto = 1,
-                Data = DateTime.Now,
-                Entrada = "09:00:00",
-                SaidaAlmoco = "12:30:00",
-                EntradaAlmoco = "13:30:10",
-                SaidaEmbora = "18:23:30"
-            };
-            return View(p);
+            return View();
         }
 
-        public ActionResult PontoMarcacao()
+
+        public ActionResult PontoMarcacao(int id = 0, string returnUrl = null)
         {
-            Ponto p = new Ponto
+            try
             {
-                Data = DateTime.Now,
-                Entrada = string.Format("00:00", "hh:ss")
-            };
-                
-                        return View(p);
+                return View(PontoNegocio.ListarPonto(id));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        [HttpPost]
+        public ActionResult PontoMarcacao(int id)
+        {
+            try
+            {
+                return View(PontoNegocio.ListarPonto(id));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
     }

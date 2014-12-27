@@ -15,12 +15,31 @@ namespace PontoOnline.Dominio.Entidades
         [Key]
         public int IdPonto { get; set; }
         [Required]
+        public int UsuarioId { get; set; }
+        [Required]
         public DateTime Data { get; set; }
-        public string Entrada { get; set; }
-        public string SaidaAlmoco { get; set; }
-        public string EntradaAlmoco { get; set; }
-        public string SaidaEmbora { get; set; }
+        public TimeSpan Entrada { get; set; }
+        public TimeSpan SaidaAlmoco { get; set; }
+        public TimeSpan EntradaAlmoco { get; set; }
+        public TimeSpan SaidaEmbora { get; set; }
         public TimeSpan QtdeHoraExtra { get; set; }
         public TimeSpan TotalHoraTrabalhada { get; set; }
+        public IEnumerable<Usuario> Usuario { get; set; }
+    }
+
+    public enum PontoMes
+    {
+        Janeiro,
+        Fevereiro,
+        Março,
+        Abril,
+        Maio,
+        Junho,
+        Julho,
+        Agosto,
+        Setembro,
+        Outubro,
+        Novembro,
+        Dezembro
     }
 }

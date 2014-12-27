@@ -15,6 +15,7 @@ namespace PontoOnline.Dominio.Entidades
         public int IdUsuario { get; set; }
         [Required]
         public string Nome { get; set; }
+        public string Email { get; set; }
         [Required]
         public string Senha { get; set; }
         public DateTime DataCadastro { get; set; }
